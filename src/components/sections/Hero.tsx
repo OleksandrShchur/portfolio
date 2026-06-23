@@ -105,6 +105,7 @@ export function Hero() {
                   width={400}
                   height={400}
                   className="h-64 w-64 rounded-[1.75rem] object-cover sm:h-80 sm:w-80"
+                  style={{ objectPosition: profile.photo.objectPosition }}
                   loading="eager"
                   fetchPriority="high"
                   onError={(e) => {

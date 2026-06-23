@@ -11,6 +11,7 @@ export const profile = {
     png: '/portfolio/images/profile.png',
     fallback: '/portfolio/images/profile.svg',
     alt: 'Oleksandr Shchur — professional portrait',
+    objectPosition: '50% 22%',
   },
   tagline:
     'Building cloud-native and enterprise solutions with C#/.NET, React, and AWS — focused on meaningful problems and collaborative delivery.',
