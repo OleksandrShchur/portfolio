@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a24"/>
+      <stop offset="100%" stop-color="#12121a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <rect width="400" height="400" fill="url(#glow)"/>
+  <!-- shoulders / torso -->
+  <ellipse cx="200" cy="340" rx="120" ry="80" fill="#1f1f28"/>
+  <!-- neck -->
+  <rect x="175" y="230" width="50" height="50" rx="8" fill="#c4a882"/>
+  <!-- head -->
+  <ellipse cx="200" cy="175" rx="72" ry="82" fill="#c4a882"/>
+  <!-- hair -->
+  <path d="M128 175 C128 110 160 85 200 85 C240 85 272 110 272 175 C272 145 255 120 200 115 C145 120 128 145 128 175Z" fill="#2a2520"/>
+  <!-- t-shirt -->
+  <path d="M95 310 C120 270 155 255 200 255 C245 255 280 270 305 310 L305 400 L95 400 Z" fill="#0d0d0d"/>
+  <path d="M155 255 L145 290 L175 295 L200 268 L225 295 L255 290 L245 255" fill="#111"/>
+  <!-- subtle face features -->
+  <ellipse cx="175" cy="172" rx="8" ry="5" fill="#2a2018" opacity="0.5"/>
+  <ellipse cx="225" cy="172" rx="8" ry="5" fill="#2a2018" opacity="0.5"/>
+  <path d="M185 200 Q200 210 215 200" stroke="#2a2018" stroke-width="2" fill="none" opacity="0.4" stroke-linecap="round"/>
+</svg>
