@@ -24,7 +24,7 @@ export function Navbar() {
         className="mx-auto mt-4 max-w-6xl px-4 sm:px-6 lg:px-8"
         aria-label="Main navigation"
       >
-        <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-base/70 px-4 py-3 backdrop-blur-xl">
+        <div className="relative z-50 flex items-center justify-between rounded-2xl border border-white/10 bg-base/70 px-4 py-3 backdrop-blur-xl">
           <button
             type="button"
             onClick={() => scrollToSection('hero')}
