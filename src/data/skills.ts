@@ -15,7 +15,7 @@ export const skillCategories: SkillCategory[] = [
   {
     id: 'frontend',
     title: 'Frontend',
-    skills: ['React.js', 'Angular', 'Redux'],
+    skills: ['React.js', 'Angular'],
     variant: 'primary',
   },
   {
@@ -29,7 +29,7 @@ export const skillCategories: SkillCategory[] = [
     title: 'Cloud & DevOps',
     skills: [
       'AWS (Lambda, Step Functions, API Gateway, EC2, S3, CloudFormation, CloudWatch, Athena, SQS/SNS, IAM, ECR)',
-      'Azure',
+      'Azure (Functions, App Service, Storage, Key Vault)',
     ],
     variant: 'primary',
   },
@@ -59,7 +59,7 @@ export const skillCategories: SkillCategory[] = [
   {
     id: 'testing',
     title: 'Testing',
-    skills: ['Jest', 'Cypress', 'Unit / Integration / E2E Testing'],
+    skills: ['Jest', 'Cypress', 'Unit / Integration / E2E Testing', 'NUnit', 'xUnit'],
     variant: 'secondary',
   },
   {
@@ -72,9 +72,10 @@ export const skillCategories: SkillCategory[] = [
       'Octopus',
       'SonarQube',
       'Kibana',
-      'Identity Server',
       'SignalR',
       'Hangfire',
+      'Swagger/OpenAPI',
+      'Docker'
     ],
     variant: 'secondary',
   },
