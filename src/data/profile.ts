@@ -25,10 +25,10 @@ export const profile = {
     'Test coverage discipline',
   ],
   personalTouch:
-    'Outside of code: sci-fi enthusiast, board games, strategy games, and coin collecting.',
+    'Outside of code: sci-fi enthusiast, board games fan, tennis player and coin collector.',
   rotatingRoles: ['.NET Engineer', 'React Developer', 'AWS Cloud Developer'],
   stats: [
-    { label: 'Years Experience', value: '4+' },
+    { label: 'Years Experience', value: '6+' },
     { label: 'Enterprise Domains', value: '3' },
     { label: 'Certifications', value: '3' },
   ],
