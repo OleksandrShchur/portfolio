@@ -54,8 +54,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <GlassCard className="flex h-full flex-col">
       <div className="flex items-start justify-between gap-3">
         <div
-          title="Project"
-          aria-label="Project"
+          title={project.title}
+          aria-label={project.title}
           className="flex h-10 w-10 shrink-0 cursor-default items-center justify-center rounded-xl border border-violet-primary/30 bg-violet-primary/10 opacity-80"
         >
           <FolderGit2 className="h-5 w-5 text-violet-glow" aria-hidden />
