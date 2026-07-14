@@ -22,38 +22,70 @@ export function useActiveSection(sectionIds: readonly string[]): string {
   const [activeSection, setActiveSection] = useState(sectionIds[0] ?? '');
 
   useEffect(() => {
-    const observers: IntersectionObserver[] = [];
+    let observers: IntersectionObserver[] = [];
     const visibleSections = new Map<string, number>();
 
-    sectionIds.forEach((id) => {
-      const element = document.getElementById(id);
-      if (!element) return;
+    const disconnectObservers = () => {
+      observers.forEach((observer) => observer.disconnect());
+      observers = [];
+      visibleSections.clear();
+    };
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              visibleSections.set(id, entry.intersectionRatio);
-            } else {
-              visibleSections.delete(id);
-            }
+    const setup = (): boolean => {
+      disconnectObservers();
 
-            if (visibleSections.size === 0) return;
+      let allFound = true;
 
-            const sorted = [...visibleSections.entries()].sort(
-              (a, b) => b[1] - a[1],
-            );
-            setActiveSection(sorted[0][0]);
-          });
-        },
-        { rootMargin: '-40% 0px -45% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] },
-      );
+      sectionIds.forEach((id) => {
+        const element = document.getElementById(id);
+        if (!element) {
+          allFound = false;
+          return;
+        }
 
-      observer.observe(element);
-      observers.push(observer);
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                visibleSections.set(id, entry.intersectionRatio);
+              } else {
+                visibleSections.delete(id);
+              }
+
+              if (visibleSections.size === 0) return;
+
+              const sorted = [...visibleSections.entries()].sort(
+                (a, b) => b[1] - a[1],
+              );
+              setActiveSection(sorted[0][0]);
+            });
+          },
+          { rootMargin: '-40% 0px -45% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] },
+        );
+
+        observer.observe(element);
+        observers.push(observer);
+      });
+
+      return allFound;
+    };
+
+    if (setup()) {
+      return () => disconnectObservers();
+    }
+
+    const mutationObserver = new MutationObserver(() => {
+      if (setup()) {
+        mutationObserver.disconnect();
+      }
     });
 
-    return () => observers.forEach((observer) => observer.disconnect());
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      mutationObserver.disconnect();
+      disconnectObservers();
+    };
   }, [sectionIds]);
 
   return activeSection;

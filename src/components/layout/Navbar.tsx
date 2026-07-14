@@ -144,9 +144,15 @@ export function Navbar() {
             key={item.id}
             type="button"
             onClick={() => handleNavClick(item.href)}
-            className="group flex items-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-glow"
+            className="group relative flex items-center justify-end focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-glow"
             aria-label={item.label}
           >
+            <span
+              className="pointer-events-none absolute right-5 whitespace-nowrap rounded-md bg-base-elevated/90 px-2 py-1 text-xs text-zinc-200 opacity-0 backdrop-blur-sm transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100"
+              aria-hidden
+            >
+              {item.label}
+            </span>
             <span
               className={cn(
                 'h-2 w-2 rounded-full transition-all',
