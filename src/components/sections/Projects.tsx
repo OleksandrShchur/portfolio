@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, FolderGit2, Github } from 'lucide-react';
+import { ExternalLink, FolderGit2, Github, Lock } from 'lucide-react';
 import { projects } from '@/data/projects';
 import { usePrefersReducedMotion } from '@/hooks';
 import { SectionWrapper } from '@/components/layout/SectionWrapper';
@@ -15,7 +15,7 @@ export function Projects() {
     <SectionWrapper
       id="projects"
       title="Projects"
-      subtitle="Selected open-source and personal work from GitHub."
+      subtitle="Selected personal and open-source projects."
     >
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => {
@@ -36,6 +36,15 @@ export function Projects() {
                     <FolderGit2 className="h-5 w-5 text-violet-glow" />
                   </div>
                   <div className="flex shrink-0 gap-2">
+                    {project.isPrivate && !project.githubUrl && (
+                      <span
+                        title="Private repository"
+                        className="rounded-lg border border-violet-primary/20 p-2 text-zinc-500"
+                        aria-label="Private repository"
+                      >
+                        <Lock className="h-4 w-4" />
+                      </span>
+                    )}
                     {project.githubUrl && (
                       <a
                         href={project.githubUrl}
@@ -52,7 +61,11 @@ export function Projects() {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label={`View live demo of ${project.title}`}
+                        aria-label={
+                          project.isPrivate
+                            ? `View Telegram channel for ${project.title}`
+                            : `View live demo of ${project.title}`
+                        }
                         className="rounded-lg border border-violet-primary/20 p-2 text-zinc-400 transition-colors hover:border-violet-glow/50 hover:text-violet-glow"
                       >
                         <ExternalLink className="h-4 w-4" />

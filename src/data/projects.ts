@@ -6,9 +6,19 @@ export interface Project {
   githubUrl?: string;
   liveUrl?: string;
   image?: string;
+  isPrivate?: boolean;
 }
 
 export const projects: Project[] = [
+  {
+    id: 'findif-bot',
+    title: 'AskIFBot',
+    description:
+      'Telegram bot for the «Франківськ Питає» community channel — users submit publication requests (text and photo albums) that moderators review before publishing. Includes subscription checks, durable ask sessions, request history, and a full admin moderation workflow.',
+    techStack: ['.NET 9', 'ASP.NET Core', 'Telegram.Bot', 'EF Core', 'SQL Server', 'Serilog', 'xUnit'],
+    liveUrl: 'https://t.me/ask_frankivsk',
+    isPrivate: true,
+  },
   {
     id: 'mebel-online',
     title: 'MebelOnline',
