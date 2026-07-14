@@ -22,9 +22,9 @@ const Certifications = lazy(() =>
     default: m.Certifications,
   })),
 );
-const ProjectsPlaceholder = lazy(() =>
-  import('@/components/sections/ProjectsPlaceholder').then((m) => ({
-    default: m.ProjectsPlaceholder,
+const Projects = lazy(() =>
+  import('@/components/sections/Projects').then((m) => ({
+    default: m.Projects,
   })),
 );
 const Contact = lazy(() =>
@@ -49,7 +49,7 @@ export default function App() {
           <Experience />
           <Education />
           <Certifications />
-          <ProjectsPlaceholder />
+          <Projects />
           <Contact />
         </Suspense>
       </main>
