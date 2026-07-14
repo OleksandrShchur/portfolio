@@ -68,7 +68,7 @@ export const experience: ExperienceEntry[] = [
       'Confluence',
       'IIS',
     ],
-    teamSize: 'Scrum team 8, project ~40',
+    teamSize: 'Scrum team 8, project team ~40',
   },
   {
     id: 'softserve-oil',
