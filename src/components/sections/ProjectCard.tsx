@@ -87,7 +87,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={
-                project.isPrivate
+                project.liveUrl?.includes('t.me')
                   ? `View Telegram channel for ${project.title}`
                   : `View live demo of ${project.title}`
               }
