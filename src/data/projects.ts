@@ -12,12 +12,12 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 'findif-bot',
-    title: 'AskIFBot',
+    title: 'AskIfBot',
     description:
-      'Telegram bot for the «Франківськ Питає» community channel — users submit publication requests (text and photo albums) that moderators review before publishing. Includes subscription checks, durable ask sessions, request history, and a full admin moderation workflow.',
+      'Telegram bot for the «Франківськ Питає» community channel — users submit publication requests (text and photo albums) that moderators review before publishing. Includes subscription checks, durable ask sessions, moderation queue, request history, ads/collaboration flow, and operational logging with GitHub Actions CI.',
     techStack: ['.NET 9', 'ASP.NET Core', 'Telegram.Bot', 'EF Core', 'SQL Server', 'Serilog', 'xUnit'],
+    githubUrl: 'https://github.com/OleksandrShchur/FindIFBot',
     liveUrl: 'https://t.me/ask_frankivsk',
-    isPrivate: true,
   },
   {
     id: 'mebel-online',
