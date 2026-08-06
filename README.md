@@ -53,6 +53,19 @@ npm run lint
 npm run format
 ```
 
+## Featured Projects
+
+Project cards are defined in `src/data/projects.ts` and linked to public GitHub repos:
+
+| Project | Highlights |
+|---------|------------|
+| [AskIfBot](https://github.com/OleksandrShchur/FindIFBot) | Telegram moderation bot for «Франківськ Питає» (.NET 9, EF Core, Serilog, CI) — [live channel](https://t.me/ask_frankivsk) |
+| [MebelOnline](https://github.com/OleksandrShchur/MebelOnline) | Furniture e-commerce API + React/MUI SPA (ASP.NET Core 9, EF Core, OpenAPI) |
+| [MebelLanding](https://github.com/OleksandrShchur/MebelLanding) | Furniture landing page with magazine-style page-flip viewer (React 19, Tailwind, Framer Motion) |
+| [EventsExpress](https://github.com/OleksandrShchur/EventsExpress) | Event discovery platform — SoftServe internship contribution |
+| [RecordBook](https://github.com/OleksandrShchur/VisitorsTracker) | University attendance record book (ASP.NET Core SPA, JWT + Google auth) |
+| [AccuWebScraper](https://github.com/OleksandrShchur/AccuWebScraper) | Scheduled scraper with Telegram delivery + React 19 dashboard (HtmlAgilityPack, Docker) |
+
 ## Content Updates
 
 All copy lives in `src/data/` — update these files without touching UI components:
@@ -64,7 +77,7 @@ All copy lives in `src/data/` — update these files without touching UI compone
 | `experience.ts` | Work history timeline |
 | `education.ts` | Degrees |
 | `certifications.ts` | Cert badges |
-| `projects.ts` | Future project cards (currently empty) |
+| `projects.ts` | Project cards (title, description, tech stack, links) |
 | `navigation.ts` | Nav links |
 
 ## Assets
