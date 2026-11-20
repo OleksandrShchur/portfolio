@@ -75,7 +75,7 @@ export const skillCategories: SkillCategory[] = [
       'SignalR',
       'Hangfire',
       'Swagger/OpenAPI',
-      'Docker'
+      'Docker',
     ],
     variant: 'secondary',
   },

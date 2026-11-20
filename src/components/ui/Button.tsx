@@ -28,14 +28,7 @@ const sizeStyles: Record<ButtonSize, string> = {
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
-  {
-    className,
-    variant = 'primary',
-    size = 'md',
-    magnetic = false,
-    children,
-    ...props
-  },
+  { className, variant = 'primary', size = 'md', magnetic = false, children, ...props },
   ref,
 ) {
   return (

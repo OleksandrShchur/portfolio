@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Download, Mail, MapPin } from 'lucide-react';
+import { ArrowDown, Code2, Download, Mail, MapPin } from 'lucide-react';
 import { profile } from '@/data/profile';
 import { usePrefersReducedMotion } from '@/hooks';
 import { downloadCv, scrollToSection } from '@/utils';
@@ -23,51 +23,61 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen items-center scroll-mt-24 pt-28"
+      className="relative flex min-h-screen scroll-mt-24 items-center pt-24"
     >
-      <div className="mx-auto grid w-full max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8">
+      <div className="mx-auto grid w-full max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8">
         <motion.div
           initial={prefersReducedMotion ? false : { opacity: 0, y: 32 }}
           animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="font-mono text-sm text-violet-glow">init portfolio.exe</p>
+          <div className="inline-flex items-center gap-2 rounded-full border border-violet-primary/30 bg-violet-primary/10 px-3 py-1 font-mono text-xs text-violet-glow">
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
+            <span>Open for new engineering challenges</span>
+          </div>
+
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
             {profile.name}
           </h1>
-          <p className="mt-2 text-2xl font-medium text-violet-primary sm:text-3xl">
+          <p className="mt-2 text-2xl font-semibold text-violet-primary sm:text-3xl">
             {profile.title}
           </p>
 
           <div className="mt-4 h-8 overflow-hidden">
             <motion.p
               key={roleIndex}
-              className="font-mono text-lg text-zinc-400"
+              className="font-mono text-lg text-zinc-300"
               initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
               animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
               exit={prefersReducedMotion ? undefined : { opacity: 0, y: -12 }}
             >
-              &gt; {profile.rotatingRoles[roleIndex]}
+              <span className="text-violet-glow">&gt;</span>{' '}
+              {profile.rotatingRoles[roleIndex]}
             </motion.p>
           </div>
 
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-300">
             {profile.tagline}
           </p>
 
-          <div className="mt-4 flex items-center gap-2 text-sm text-zinc-500">
+          <div className="mt-4 flex items-center gap-2 text-sm text-zinc-400">
             <MapPin className="h-4 w-4 text-violet-glow" aria-hidden />
             {profile.location}
           </div>
 
           <div className="mt-8 flex flex-wrap gap-3">
+            <Button type="button" magnetic onClick={() => scrollToSection('projects')}>
+              <Code2 className="h-4 w-4" />
+              Explore Projects
+            </Button>
             <Button
               type="button"
+              variant="secondary"
               magnetic
               onClick={() => scrollToSection('experience')}
             >
-              View Experience
               <ArrowDown className="h-4 w-4" />
+              Experience
             </Button>
             <Button
               type="button"
@@ -76,11 +86,11 @@ export function Hero() {
               onClick={() => scrollToSection('contact')}
             >
               <Mail className="h-4 w-4" />
-              Contact Me
+              Contact
             </Button>
             <Button type="button" variant="outline" magnetic onClick={downloadCv}>
               <Download className="h-4 w-4" />
-              Download CV
+              CV
             </Button>
           </div>
         </motion.div>
