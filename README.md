@@ -59,12 +59,12 @@ Project cards are defined in `src/data/projects.ts` and linked to public GitHub 
 
 | Project | Highlights |
 |---------|------------|
+| [Secret Santa](https://github.com/OleksandrShchur/SecretSanta) | Telegram Mini App for Secret Santa gift exchanges (.NET 10, React 19, TMA SDK, SQL Server) |
+| [SellaSolar Admin](https://github.com/OleksandrShchur/SellaSolar.Admin) | Solar panel installation CRM & warehouse admin (.NET 10, EF Core DB-first, React, MUI) |
+| [Stand](https://github.com/OleksandrShchur/Stand) | Public volunteer shift booking web app (.NET 10, EF Core, React 19, MUI, LocalDB) |
 | [AskIfBot](https://github.com/OleksandrShchur/FindIFBot) | Telegram moderation bot for «Франківськ Питає» (.NET 9, EF Core, Serilog, CI) — [live channel](https://t.me/ask_frankivsk) |
-| [MebelOnline](https://github.com/OleksandrShchur/MebelOnline) | Furniture e-commerce API + React/MUI SPA (ASP.NET Core 9, EF Core, OpenAPI) |
 | [MebelLanding](https://github.com/OleksandrShchur/MebelLanding) | Furniture landing page with magazine-style page-flip viewer (React 19, Tailwind, Framer Motion) |
-| [EventsExpress](https://github.com/OleksandrShchur/EventsExpress) | Event discovery platform — SoftServe internship contribution |
-| [RecordBook](https://github.com/OleksandrShchur/VisitorsTracker) | University attendance record book (ASP.NET Core SPA, JWT + Google auth) |
-| [AccuWebScraper](https://github.com/OleksandrShchur/AccuWebScraper) | Scheduled scraper with Telegram delivery + React 19 dashboard (HtmlAgilityPack, Docker) |
+| [SellaSolar](https://github.com/OleksandrShchur/SellaSolar) | Residential solar installation marketing landing page (React 18, Tailwind, Framer Motion) — [live site](https://oleksandrshchur.github.io/SellaSolar/) |
 
 ## Content Updates
 
