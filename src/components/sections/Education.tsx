@@ -9,7 +9,11 @@ export function Education() {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   return (
-    <SectionWrapper id="education" title="Education" subtitle="Computer Science foundation from Chernivtsi National University.">
+    <SectionWrapper
+      id="education"
+      title="Education"
+      subtitle="Computer Science foundation from Chernivtsi National University."
+    >
       <div className="grid gap-6 md:grid-cols-2">
         {education.map((entry, index) => (
           <motion.div
@@ -26,7 +30,9 @@ export function Education() {
                 </div>
                 <div>
                   <p className="font-mono text-sm text-violet-glow">{entry.period}</p>
-                  <h3 className="mt-1 text-lg font-semibold text-white">{entry.degree}</h3>
+                  <h3 className="mt-1 text-lg font-semibold text-white">
+                    {entry.degree}
+                  </h3>
                   <p className="mt-2 text-sm text-zinc-400">{entry.institution}</p>
                 </div>
               </div>

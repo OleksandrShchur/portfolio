@@ -27,7 +27,9 @@ export function Certifications() {
               <Award className="h-5 w-5 text-violet-glow" />
               <span className="font-mono text-xs text-zinc-500">{cert.year}</span>
             </div>
-            <h3 className="mt-4 font-mono text-xl font-bold text-violet-glow">{cert.code}</h3>
+            <h3 className="mt-4 font-mono text-xl font-bold text-violet-glow">
+              {cert.code}
+            </h3>
             <p className="mt-2 text-sm font-medium text-white">{cert.name}</p>
             <p className="mt-1 text-xs text-zinc-500">{cert.issuer}</p>
           </motion.article>

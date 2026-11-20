@@ -9,9 +9,8 @@ export const navItems: NavItem[] = [
   { id: 'about', label: 'About', href: '#about' },
   { id: 'skills', label: 'Skills', href: '#skills' },
   { id: 'experience', label: 'Experience', href: '#experience' },
-  { id: 'education', label: 'Education', href: '#education' },
-  { id: 'certifications', label: 'Certifications', href: '#certifications' },
   { id: 'projects', label: 'Projects', href: '#projects' },
+  { id: 'credentials', label: 'Credentials', href: '#credentials' },
   { id: 'contact', label: 'Contact', href: '#contact' },
 ];
 
@@ -20,9 +19,10 @@ export const sectionIds = [
   'about',
   'skills',
   'experience',
+  'projects',
+  'credentials',
   'education',
   'certifications',
-  'projects',
   'contact',
 ] as const;
 

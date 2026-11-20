@@ -54,9 +54,7 @@ export function useActiveSection(sectionIds: readonly string[]): string {
 
               if (visibleSections.size === 0) return;
 
-              const sorted = [...visibleSections.entries()].sort(
-                (a, b) => b[1] - a[1],
-              );
+              const sorted = [...visibleSections.entries()].sort((a, b) => b[1] - a[1]);
               setActiveSection(sorted[0][0]);
             });
           },
