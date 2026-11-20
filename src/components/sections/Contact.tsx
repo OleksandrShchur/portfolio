@@ -11,7 +11,7 @@ export function Contact() {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   return (
-    <SectionWrapper id="contact" title="Get in Touch">
+    <SectionWrapper id="contact" title="Get in Touch" className="pt-6 md:pt-8">
       <motion.div
         className="mx-auto max-w-2xl text-center"
         initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}

@@ -21,11 +21,11 @@ export function SectionWrapper({
   const prefersReducedMotion = usePrefersReducedMotion();
 
   return (
-    <section id={id} className={cn('scroll-mt-24 py-20 md:py-28', className)}>
+    <section id={id} className={cn('scroll-mt-24 py-10 md:py-14', className)}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {(title || subtitle) && (
           <motion.header
-            className="mb-12 md:mb-16"
+            className="mb-8 md:mb-10"
             initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
             whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}

@@ -14,6 +14,7 @@ export function Credentials() {
       id="credentials"
       title="Credentials & Education"
       subtitle="Academic Computer Science foundation and certified professional competencies."
+      className="pb-6 md:pb-8"
     >
       <div className="grid gap-8 lg:grid-cols-2">
         {/* Education Column */}

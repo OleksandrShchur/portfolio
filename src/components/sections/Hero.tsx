@@ -23,7 +23,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen scroll-mt-24 items-center pt-24"
+      className="relative scroll-mt-24 pb-16 pt-24 sm:pb-20 sm:pt-28 lg:pb-24 lg:pt-28"
     >
       <div className="mx-auto grid w-full max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8">
         <motion.div
